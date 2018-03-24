@@ -24,7 +24,43 @@ namespace EZNIC
 
         private void btnProfiles_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void btnCreateNewProf_Click(object sender, EventArgs e)
+        {
 
         }
+
+        private void btnDHPC_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnApplyDHPC_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioAutoIP_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioStaticIP_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioAutoDNS_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioSpecifyDNS_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
