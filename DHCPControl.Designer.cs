@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.radioStaticIP = new System.Windows.Forms.RadioButton();
             this.radioAutoIP = new System.Windows.Forms.RadioButton();
@@ -46,8 +47,10 @@
             this.btnCreateNewProf = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.programBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.programBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -67,7 +70,7 @@
             this.radioStaticIP.Location = new System.Drawing.Point(274, 8);
             this.radioStaticIP.Margin = new System.Windows.Forms.Padding(0);
             this.radioStaticIP.Name = "radioStaticIP";
-            this.radioStaticIP.Size = new System.Drawing.Size(170, 24);
+            this.radioStaticIP.Size = new System.Drawing.Size(206, 28);
             this.radioStaticIP.TabIndex = 1;
             this.radioStaticIP.TabStop = true;
             this.radioStaticIP.Text = "Statically set IP address";
@@ -80,11 +83,12 @@
             this.radioAutoIP.Location = new System.Drawing.Point(21, 8);
             this.radioAutoIP.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.radioAutoIP.Name = "radioAutoIP";
-            this.radioAutoIP.Size = new System.Drawing.Size(215, 24);
+            this.radioAutoIP.Size = new System.Drawing.Size(262, 28);
             this.radioAutoIP.TabIndex = 0;
             this.radioAutoIP.TabStop = true;
             this.radioAutoIP.Text = "Automatically detect IP address";
             this.radioAutoIP.UseVisualStyleBackColor = true;
+            this.radioAutoIP.CheckedChanged += new System.EventHandler(this.radioAutoIP_CheckedChanged);
             // 
             // panel2
             // 
@@ -101,7 +105,7 @@
             this.radioSpecifyDNS.AutoSize = true;
             this.radioSpecifyDNS.Location = new System.Drawing.Point(274, 3);
             this.radioSpecifyDNS.Name = "radioSpecifyDNS";
-            this.radioSpecifyDNS.Size = new System.Drawing.Size(103, 24);
+            this.radioSpecifyDNS.Size = new System.Drawing.Size(125, 28);
             this.radioSpecifyDNS.TabIndex = 19;
             this.radioSpecifyDNS.TabStop = true;
             this.radioSpecifyDNS.Text = "Specify DNS";
@@ -112,18 +116,19 @@
             this.radioAutoDNS.AutoSize = true;
             this.radioAutoDNS.Location = new System.Drawing.Point(21, 3);
             this.radioAutoDNS.Name = "radioAutoDNS";
-            this.radioAutoDNS.Size = new System.Drawing.Size(116, 24);
+            this.radioAutoDNS.Size = new System.Drawing.Size(145, 28);
             this.radioAutoDNS.TabIndex = 18;
             this.radioAutoDNS.TabStop = true;
             this.radioAutoDNS.Text = "Automatic DNS";
             this.radioAutoDNS.UseVisualStyleBackColor = true;
+            this.radioAutoDNS.CheckedChanged += new System.EventHandler(this.radioAutoDNS_CheckedChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(37, 94);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(80, 20);
+            this.label1.Size = new System.Drawing.Size(95, 24);
             this.label1.TabIndex = 5;
             this.label1.Text = "IP Address:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -132,7 +137,7 @@
             // 
             this.ipAddressInput.Location = new System.Drawing.Point(231, 91);
             this.ipAddressInput.Name = "ipAddressInput";
-            this.ipAddressInput.Size = new System.Drawing.Size(170, 26);
+            this.ipAddressInput.Size = new System.Drawing.Size(170, 30);
             this.ipAddressInput.TabIndex = 13;
             this.ipAddressInput.TextChanged += new System.EventHandler(this.ipAddressInput_TextChanged);
             // 
@@ -141,7 +146,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(37, 146);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 20);
+            this.label2.Size = new System.Drawing.Size(112, 24);
             this.label2.TabIndex = 14;
             this.label2.Text = "Subnet Mask:";
             // 
@@ -149,15 +154,16 @@
             // 
             this.subnetMaskInput.Location = new System.Drawing.Point(231, 143);
             this.subnetMaskInput.Name = "subnetMaskInput";
-            this.subnetMaskInput.Size = new System.Drawing.Size(170, 26);
+            this.subnetMaskInput.Size = new System.Drawing.Size(170, 30);
             this.subnetMaskInput.TabIndex = 15;
+            this.subnetMaskInput.TextChanged += new System.EventHandler(this.subnetMaskInput_TextChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(37, 202);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(108, 20);
+            this.label3.Size = new System.Drawing.Size(139, 24);
             this.label3.TabIndex = 16;
             this.label3.Text = "Default Gateway:";
             // 
@@ -165,7 +171,7 @@
             // 
             this.defaultGatewayInput.Location = new System.Drawing.Point(231, 199);
             this.defaultGatewayInput.Name = "defaultGatewayInput";
-            this.defaultGatewayInput.Size = new System.Drawing.Size(170, 26);
+            this.defaultGatewayInput.Size = new System.Drawing.Size(170, 30);
             this.defaultGatewayInput.TabIndex = 17;
             // 
             // label4
@@ -173,7 +179,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(37, 331);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(93, 20);
+            this.label4.Size = new System.Drawing.Size(112, 24);
             this.label4.TabIndex = 18;
             this.label4.Text = "DNS address:";
             // 
@@ -181,8 +187,9 @@
             // 
             this.dnsAddressInput.Location = new System.Drawing.Point(231, 325);
             this.dnsAddressInput.Name = "dnsAddressInput";
-            this.dnsAddressInput.Size = new System.Drawing.Size(170, 26);
+            this.dnsAddressInput.Size = new System.Drawing.Size(170, 30);
             this.dnsAddressInput.TabIndex = 19;
+            this.dnsAddressInput.TextChanged += new System.EventHandler(this.dnsAddressInput_TextChanged);
             // 
             // btnApplyDHCP
             // 
@@ -209,7 +216,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(37, 11);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(66, 20);
+            this.label5.Size = new System.Drawing.Size(84, 24);
             this.label5.TabIndex = 22;
             this.label5.Text = "NIC Card:";
             // 
@@ -218,12 +225,17 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(231, 8);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(170, 28);
+            this.comboBox1.Size = new System.Drawing.Size(170, 32);
             this.comboBox1.TabIndex = 23;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // programBindingSource
+            // 
+            this.programBindingSource.DataSource = typeof(EZNIC.Program);
             // 
             // DHCPControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.comboBox1);
@@ -248,6 +260,7 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.programBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -273,5 +286,6 @@
         private System.Windows.Forms.Button btnCreateNewProf;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.BindingSource programBindingSource;
     }
 }

@@ -8,7 +8,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Management;
+using System.Net;
+using System.Net.NetworkInformation;
+using System.Net.Sockets;
 namespace EZNIC
 {
     public partial class DHCPControl : UserControl
@@ -18,6 +21,15 @@ namespace EZNIC
         public DHCPControl()
         {
             InitializeComponent();
+            NetworkInterface[] ifaceList = NetworkInterface.GetAllNetworkInterfaces();
+            var niclist = new List<string>();
+
+            foreach(NetworkInterface ni in ifaceList)
+            {
+                this.comboBox1.Items.Add(ni.Description);
+            }
+
+
         }
 
 #pragma warning disable IDE1006 // Naming Styles
@@ -66,7 +78,19 @@ namespace EZNIC
 
         private void btnApplyDHCP_Click(object sender, EventArgs e)
         {
-
+            string selected = this.comboBox1.Text;
+            if (radioAutoIP.Checked)
+            {
+                Program.setDynamic(selected);
+            }
+            else if (radioStaticIP.Checked)
+            {
+                Program.setStatic(selected, ipAddressInput.Text, subnetMaskInput.Text, defaultGatewayInput.Text);
+            }
+            if (radioSpecifyDNS.Checked)
+            {
+                Program.setStaticDns(selected, dnsAddressInput.Text);
+            }
         }
 
         private void btnCreateNewProf_Click(object sender, EventArgs e)
@@ -91,6 +115,31 @@ namespace EZNIC
         }
 
         private void radioStaticIP_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioAutoIP_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioAutoDNS_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void subnetMaskInput_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dnsAddressInput_TextChanged(object sender, EventArgs e)
         {
 
         }

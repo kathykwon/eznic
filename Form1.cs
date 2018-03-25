@@ -62,7 +62,7 @@ namespace EZNIC
 
             private void Title_Click(object sender, EventArgs e)
         {
-
+            System.Diagnostics.Process.Start("C://Users//tyler//eznic//frontend//index.html");
         }
 
 #pragma warning disable IDE1006 // Naming Styles
@@ -107,7 +107,7 @@ namespace EZNIC
         private void radioAutoDNS_Click(object sender, EventArgs e)
 #pragma warning restore IDE1006 // Naming Styles
         {
-
+            
         }
 
 #pragma warning disable IDE1006 // Naming Styles
