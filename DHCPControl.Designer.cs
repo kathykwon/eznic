@@ -173,6 +173,7 @@
             this.defaultGatewayInput.Name = "defaultGatewayInput";
             this.defaultGatewayInput.Size = new System.Drawing.Size(170, 30);
             this.defaultGatewayInput.TabIndex = 17;
+            this.defaultGatewayInput.TextChanged += new System.EventHandler(this.defaultGatewayInput_TextChanged);
             // 
             // label4
             // 
