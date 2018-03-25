@@ -1,0 +1,64 @@
+body {
+  background-color: #ffffff;
+  color: #5e5e61;
+  height: 100%;
+  margin:0;
+  font-family: 'Raleway', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+#bluebar {
+  height: 30px;
+  width: 100%;
+  background-color: #3bbeff;
+}
+
+#header {
+  height: 300px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-image: url(bg.jpg);
+  background-position: 50% 65%;
+  color: white;
+  display: flex;
+}
+
+#headerbg {
+  position: absolute;
+  top: 30;
+  opacity: .5;
+  background-color: black;
+  background-image: url(https://diversifiedus.com/wp-content/themes/enfold/images/background-images/dots-mini-light.png);
+  height: 300px;
+  width: 100%;
+  z-index: 0;
+}
+
+#headertxt {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#ez {
+  color: #21b6fc;
+}
+
+.step {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+} 
+
+h1, h2{
+  margin: 0;
+  font-size: 24px;
+  margin-left: 50px;
+  font-weight: 300;
+  line-height: 1.3em;
+}
+
+h2 {
+  font-size: 40px;
+  font-weight: bold;
+}
