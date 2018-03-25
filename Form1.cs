@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,12 +13,48 @@ namespace EZNIC
 {
     public partial class Form1 : Form
     {
+        private Profile[] profileList = new Profile[1];
+
         public Form1()
         {
             InitializeComponent();
         }
 
-        private void Title_Click(object sender, EventArgs e)
+        private void write(Profile obj)
+        {
+            StreamWriter sw = new StreamWriter("Profiles.txt"); //writing to profiles.txt
+            sw.WriteLine(profileList.Length + 1);               //incrementing length of array
+            sw.WriteLine(obj.IpAddress);
+            sw.WriteLine(obj.SubnetMask);
+            sw.WriteLine(obj.DefaultGateway);
+
+            for(int i = 0; i < profileList.Length; i++)
+            {
+                sw.WriteLine(profileList[i].IpAddress);
+                sw.WriteLine(profileList[i].SubnetMask);
+                sw.WriteLine(profileList[i].DefaultGateway);
+            }
+
+            sw.Close();
+        }
+
+        private void Read()
+        {
+            StreamReader sr = new StreamReader("Profiles.txt");
+            profileList = new Profile[Convert.ToInt32(sr.ReadLine())];
+
+            for(int i = 0; i < profileList.Length; i++)
+            {
+                profileList[i] = new Profile();
+                profileList[i].IpAddress = sr.ReadLine();
+                profileList[i].SubnetMask = sr.ReadLine();
+                profileList[i].DefaultGateway = sr.ReadLine();
+            }
+
+            sr.Close();
+        }
+
+            private void Title_Click(object sender, EventArgs e)
         {
 
         }
@@ -29,7 +66,13 @@ namespace EZNIC
 
         private void btnCreateNewProf_Click(object sender, EventArgs e)
         {
+            Profile obj = new Profile();
+            obj.IpAddress = ipAddressInput.Text;
+            obj.SubnetMask = subnetMaskInput.Text;
+            obj.DefaultGateway = defaultGatewayInput.Text;
 
+            write(obj);
+            Read();
         }
 
         private void btnDHPC_Click(object sender, EventArgs e)
