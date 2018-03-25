@@ -20,7 +20,9 @@ namespace EZNIC
             InitializeComponent();
         }
 
+#pragma warning disable IDE1006 // Naming Styles
         private void write(Profile obj)
+#pragma warning restore IDE1006 // Naming Styles
         {
             StreamWriter sw = new StreamWriter("Profiles.txt"); //writing to profiles.txt
             sw.WriteLine(profileList.Length + 1);               //incrementing length of array
@@ -45,7 +47,9 @@ namespace EZNIC
 
             for(int i = 0; i < profileList.Length; i++)
             {
+#pragma warning disable IDE0017 // Simplify object initialization
                 profileList[i] = new Profile();
+#pragma warning restore IDE0017 // Simplify object initialization
                 profileList[i].IpAddress = sr.ReadLine();
                 profileList[i].SubnetMask = sr.ReadLine();
                 profileList[i].DefaultGateway = sr.ReadLine();
@@ -59,51 +63,78 @@ namespace EZNIC
 
         }
 
+#pragma warning disable IDE1006 // Naming Styles
         private void btnProfiles_Click(object sender, EventArgs e)
+#pragma warning restore IDE1006 // Naming Styles
         {
             
         }
 
+#pragma warning disable IDE1006 // Naming Styles
         private void btnCreateNewProf_Click(object sender, EventArgs e)
+#pragma warning restore IDE1006 // Naming Styles
         {
             Profile obj = new Profile();
-            obj.IpAddress = ipAddressInput.Text;
-            obj.SubnetMask = subnetMaskInput.Text;
-            obj.DefaultGateway = defaultGatewayInput.Text;
+           // obj.IpAddress = ipAddressInput.Text;
+            //obj.SubnetMask = subnetMaskInput.Text;
+            //obj.DefaultGateway = defaultGatewayInput.Text;
 
             write(obj);
             Read();
         }
 
+#pragma warning disable IDE1006 // Naming Styles
         private void btnDHPC_Click(object sender, EventArgs e)
+#pragma warning restore IDE1006 // Naming Styles
         {
 
         }
 
+#pragma warning disable IDE1006 // Naming Styles
         private void btnApplyDHPC_Click(object sender, EventArgs e)
+#pragma warning restore IDE1006 // Naming Styles
         {
 
         }
 
+#pragma warning disable IDE1006 // Naming Styles
         private void radioAutoIP_Click(object sender, EventArgs e)
+#pragma warning restore IDE1006 // Naming Styles
         {
 
         }
 
+#pragma warning disable IDE1006 // Naming Styles
         private void radioStaticIP_Click(object sender, EventArgs e)
+#pragma warning restore IDE1006 // Naming Styles
         {
 
         }
 
+#pragma warning disable IDE1006 // Naming Styles
         private void radioAutoDNS_Click(object sender, EventArgs e)
+#pragma warning restore IDE1006 // Naming Styles
         {
 
         }
 
+#pragma warning disable IDE1006 // Naming Styles
         private void radioSpecifyDNS_Click(object sender, EventArgs e)
+#pragma warning restore IDE1006 // Naming Styles
         {
 
         }
 
+#pragma warning disable IDE1006 // Naming Styles
+        private void panel3_Paint(object sender, PaintEventArgs e)
+#pragma warning restore IDE1006 // Naming Styles
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
