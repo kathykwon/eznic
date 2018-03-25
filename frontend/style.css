@@ -4,6 +4,7 @@ body {
   height: 100%;
   margin:0;
   font-family: 'Raleway', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  margin-bottom: 50px;
 }
 
 #bluebar {
@@ -16,8 +17,8 @@ body {
   height: 300px;
   width: 100%;
   background-repeat: no-repeat;
-  background-image: url(bg.jpg);
-  background-position: 50% 65%;
+  background-image: url(sky.jpg);
+  background-position: 50% 40%;
   color: white;
   display: flex;
 }
@@ -49,6 +50,7 @@ body {
   margin-left: 50px;
   display: flex;
   flex-direction: column;
+  width: 800px;
 } 
 
 h1, h2{
@@ -63,4 +65,14 @@ h1, h2{
   font-size: 40px;
   font-weight: bold;
   margin: 0;
+}
+
+.step img {
+  height: 600px;
+  width: 500px;
+}
+
+#ss2 {
+  width: 447px;
+  height: 211px;
 }
