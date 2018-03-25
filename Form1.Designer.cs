@@ -33,7 +33,7 @@
             this.Title = new System.Windows.Forms.Label();
             this.btnDHCP = new System.Windows.Forms.Button();
             this.btnProfiles = new System.Windows.Forms.Button();
-            this.dhcpControl1 = new EZNIC.DHCPControl();
+            this.dhcpControl2 = new EZNIC.DHCPControl();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -92,15 +92,15 @@
             this.btnProfiles.UseVisualStyleBackColor = true;
             this.btnProfiles.Click += new System.EventHandler(this.btnProfiles_Click);
             // 
-            // dhcpControl1
+            // dhcpControl2
             // 
-            this.dhcpControl1.BackColor = System.Drawing.Color.White;
-            this.dhcpControl1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dhcpControl1.Location = new System.Drawing.Point(13, 115);
-            this.dhcpControl1.Margin = new System.Windows.Forms.Padding(0);
-            this.dhcpControl1.Name = "dhcpControl1";
-            this.dhcpControl1.Size = new System.Drawing.Size(476, 410);
-            this.dhcpControl1.TabIndex = 4;
+            this.dhcpControl2.BackColor = System.Drawing.Color.White;
+            this.dhcpControl2.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dhcpControl2.Location = new System.Drawing.Point(15, 115);
+            this.dhcpControl2.Margin = new System.Windows.Forms.Padding(0);
+            this.dhcpControl2.Name = "dhcpControl2";
+            this.dhcpControl2.Size = new System.Drawing.Size(476, 410);
+            this.dhcpControl2.TabIndex = 4;
             // 
             // Form1
             // 
@@ -108,7 +108,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(500, 550);
-            this.Controls.Add(this.dhcpControl1);
+            this.Controls.Add(this.dhcpControl2);
             this.Controls.Add(this.btnProfiles);
             this.Controls.Add(this.btnDHCP);
             this.Controls.Add(this.panel2);
@@ -132,7 +132,8 @@
         private System.Windows.Forms.Label Title;
         private System.Windows.Forms.Button btnDHCP;
         private System.Windows.Forms.Button btnProfiles;
-        private DHCPControl dhcpControl1;
+       // private DHCPControl dhcpControl1;
+        private DHCPControl dhcpControl2;
     }
 }
 
