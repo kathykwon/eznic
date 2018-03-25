@@ -18,6 +18,7 @@ namespace EZNIC
         public Form1()
         {
             InitializeComponent();
+            dhcpControl2.BringToFront();
         }
 
 #pragma warning disable IDE1006 // Naming Styles
@@ -67,21 +68,11 @@ namespace EZNIC
         private void btnProfiles_Click(object sender, EventArgs e)
 #pragma warning restore IDE1006 // Naming Styles
         {
-            
+            profilesControl1.BringToFront();
         }
 
 #pragma warning disable IDE1006 // Naming Styles
-        private void btnCreateNewProf_Click(object sender, EventArgs e)
-#pragma warning restore IDE1006 // Naming Styles
-        {
-            Profile obj = new Profile();
-           // obj.IpAddress = ipAddressInput.Text;
-            //obj.SubnetMask = subnetMaskInput.Text;
-            //obj.DefaultGateway = defaultGatewayInput.Text;
-
-            write(obj);
-            Read();
-        }
+        
 
 #pragma warning disable IDE1006 // Naming Styles
         private void btnDHPC_Click(object sender, EventArgs e)
@@ -135,6 +126,21 @@ namespace EZNIC
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void dhcpControl2_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void profilesControl1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDHCP_Click(object sender, EventArgs e)
+        {
+            dhcpControl2.BringToFront();
         }
     }
 }

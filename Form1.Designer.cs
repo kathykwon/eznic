@@ -34,6 +34,7 @@
             this.btnDHCP = new System.Windows.Forms.Button();
             this.btnProfiles = new System.Windows.Forms.Button();
             this.dhcpControl2 = new EZNIC.DHCPControl();
+            this.profilesControl1 = new EZNIC.ProfilesControl();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -78,6 +79,7 @@
             this.btnDHCP.TabIndex = 2;
             this.btnDHCP.Text = "DHCP";
             this.btnDHCP.UseVisualStyleBackColor = true;
+            this.btnDHCP.Click += new System.EventHandler(this.btnDHCP_Click);
             // 
             // btnProfiles
             // 
@@ -101,6 +103,17 @@
             this.dhcpControl2.Name = "dhcpControl2";
             this.dhcpControl2.Size = new System.Drawing.Size(476, 410);
             this.dhcpControl2.TabIndex = 4;
+            this.dhcpControl2.Load += new System.EventHandler(this.dhcpControl2_Load);
+            // 
+            // profilesControl1
+            // 
+            this.profilesControl1.BackColor = System.Drawing.Color.White;
+            this.profilesControl1.Location = new System.Drawing.Point(24, 126);
+            this.profilesControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.profilesControl1.Name = "profilesControl1";
+            this.profilesControl1.Size = new System.Drawing.Size(476, 410);
+            this.profilesControl1.TabIndex = 5;
+            this.profilesControl1.Load += new System.EventHandler(this.profilesControl1_Load);
             // 
             // Form1
             // 
@@ -108,6 +121,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(500, 550);
+            this.Controls.Add(this.profilesControl1);
             this.Controls.Add(this.dhcpControl2);
             this.Controls.Add(this.btnProfiles);
             this.Controls.Add(this.btnDHCP);
@@ -134,6 +148,7 @@
         private System.Windows.Forms.Button btnProfiles;
        // private DHCPControl dhcpControl1;
         private DHCPControl dhcpControl2;
+        private ProfilesControl profilesControl1;
     }
 }
 

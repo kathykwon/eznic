@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.radioAutoIP = new System.Windows.Forms.RadioButton();
             this.radioStaticIP = new System.Windows.Forms.RadioButton();
+            this.radioAutoIP = new System.Windows.Forms.RadioButton();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.radioSpecifyDNS = new System.Windows.Forms.RadioButton();
+            this.radioAutoDNS = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
             this.ipAddressInput = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.subnetMaskInput = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.defaultGatewayInput = new System.Windows.Forms.TextBox();
-            this.radioAutoDNS = new System.Windows.Forms.RadioButton();
-            this.radioSpecifyDNS = new System.Windows.Forms.RadioButton();
             this.label4 = new System.Windows.Forms.Label();
             this.dnsAddressInput = new System.Windows.Forms.TextBox();
             this.btnApplyDHCP = new System.Windows.Forms.Button();
@@ -59,15 +59,17 @@
             this.panel1.Size = new System.Drawing.Size(476, 42);
             this.panel1.TabIndex = 0;
             // 
-            // panel2
+            // radioStaticIP
             // 
-            this.panel2.Controls.Add(this.radioSpecifyDNS);
-            this.panel2.Controls.Add(this.radioAutoDNS);
-            this.panel2.Location = new System.Drawing.Point(0, 261);
-            this.panel2.Margin = new System.Windows.Forms.Padding(0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(476, 39);
-            this.panel2.TabIndex = 1;
+            this.radioStaticIP.AutoSize = true;
+            this.radioStaticIP.Location = new System.Drawing.Point(274, 14);
+            this.radioStaticIP.Margin = new System.Windows.Forms.Padding(0);
+            this.radioStaticIP.Name = "radioStaticIP";
+            this.radioStaticIP.Size = new System.Drawing.Size(170, 24);
+            this.radioStaticIP.TabIndex = 1;
+            this.radioStaticIP.TabStop = true;
+            this.radioStaticIP.Text = "Statically set IP address";
+            this.radioStaticIP.UseVisualStyleBackColor = true;
             // 
             // radioAutoIP
             // 
@@ -81,17 +83,37 @@
             this.radioAutoIP.Text = "Automatically detect IP address";
             this.radioAutoIP.UseVisualStyleBackColor = true;
             // 
-            // radioStaticIP
+            // panel2
             // 
-            this.radioStaticIP.AutoSize = true;
-            this.radioStaticIP.Location = new System.Drawing.Point(274, 14);
-            this.radioStaticIP.Margin = new System.Windows.Forms.Padding(0);
-            this.radioStaticIP.Name = "radioStaticIP";
-            this.radioStaticIP.Size = new System.Drawing.Size(170, 24);
-            this.radioStaticIP.TabIndex = 1;
-            this.radioStaticIP.TabStop = true;
-            this.radioStaticIP.Text = "Statically set IP address";
-            this.radioStaticIP.UseVisualStyleBackColor = true;
+            this.panel2.Controls.Add(this.radioSpecifyDNS);
+            this.panel2.Controls.Add(this.radioAutoDNS);
+            this.panel2.Location = new System.Drawing.Point(0, 261);
+            this.panel2.Margin = new System.Windows.Forms.Padding(0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(476, 39);
+            this.panel2.TabIndex = 1;
+            // 
+            // radioSpecifyDNS
+            // 
+            this.radioSpecifyDNS.AutoSize = true;
+            this.radioSpecifyDNS.Location = new System.Drawing.Point(274, 3);
+            this.radioSpecifyDNS.Name = "radioSpecifyDNS";
+            this.radioSpecifyDNS.Size = new System.Drawing.Size(103, 24);
+            this.radioSpecifyDNS.TabIndex = 19;
+            this.radioSpecifyDNS.TabStop = true;
+            this.radioSpecifyDNS.Text = "Specify DNS";
+            this.radioSpecifyDNS.UseVisualStyleBackColor = true;
+            // 
+            // radioAutoDNS
+            // 
+            this.radioAutoDNS.AutoSize = true;
+            this.radioAutoDNS.Location = new System.Drawing.Point(21, 3);
+            this.radioAutoDNS.Name = "radioAutoDNS";
+            this.radioAutoDNS.Size = new System.Drawing.Size(116, 24);
+            this.radioAutoDNS.TabIndex = 18;
+            this.radioAutoDNS.TabStop = true;
+            this.radioAutoDNS.Text = "Automatic DNS";
+            this.radioAutoDNS.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -109,6 +131,7 @@
             this.ipAddressInput.Name = "ipAddressInput";
             this.ipAddressInput.Size = new System.Drawing.Size(170, 26);
             this.ipAddressInput.TabIndex = 13;
+            this.ipAddressInput.TextChanged += new System.EventHandler(this.ipAddressInput_TextChanged);
             // 
             // label2
             // 
@@ -142,28 +165,6 @@
             this.defaultGatewayInput.Size = new System.Drawing.Size(170, 26);
             this.defaultGatewayInput.TabIndex = 17;
             // 
-            // radioAutoDNS
-            // 
-            this.radioAutoDNS.AutoSize = true;
-            this.radioAutoDNS.Location = new System.Drawing.Point(21, 3);
-            this.radioAutoDNS.Name = "radioAutoDNS";
-            this.radioAutoDNS.Size = new System.Drawing.Size(116, 24);
-            this.radioAutoDNS.TabIndex = 18;
-            this.radioAutoDNS.TabStop = true;
-            this.radioAutoDNS.Text = "Automatic DNS";
-            this.radioAutoDNS.UseVisualStyleBackColor = true;
-            // 
-            // radioSpecifyDNS
-            // 
-            this.radioSpecifyDNS.AutoSize = true;
-            this.radioSpecifyDNS.Location = new System.Drawing.Point(274, 3);
-            this.radioSpecifyDNS.Name = "radioSpecifyDNS";
-            this.radioSpecifyDNS.Size = new System.Drawing.Size(103, 24);
-            this.radioSpecifyDNS.TabIndex = 19;
-            this.radioSpecifyDNS.TabStop = true;
-            this.radioSpecifyDNS.Text = "Specify DNS";
-            this.radioSpecifyDNS.UseVisualStyleBackColor = true;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -188,6 +189,7 @@
             this.btnApplyDHCP.TabIndex = 20;
             this.btnApplyDHCP.Text = "Apply";
             this.btnApplyDHCP.UseVisualStyleBackColor = true;
+            this.btnApplyDHCP.Click += new System.EventHandler(this.btnApplyDHCP_Click);
             // 
             // btnCreateNewProf
             // 
@@ -197,6 +199,7 @@
             this.btnCreateNewProf.TabIndex = 21;
             this.btnCreateNewProf.Text = "Create New Profile";
             this.btnCreateNewProf.UseVisualStyleBackColor = true;
+            this.btnCreateNewProf.Click += new System.EventHandler(this.btnCreateNewProf_Click);
             // 
             // DHCPControl
             // 
