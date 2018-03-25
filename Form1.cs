@@ -18,6 +18,7 @@ namespace EZNIC
         public Form1()
         {
             InitializeComponent();
+            this.Text = "EZNIC";
             dhcpControl2.BringToFront();
         }
 
