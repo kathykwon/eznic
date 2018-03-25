@@ -78,7 +78,7 @@ namespace EZNIC
         private void btnDHPC_Click(object sender, EventArgs e)
 #pragma warning restore IDE1006 // Naming Styles
         {
-
+           
         }
 
 #pragma warning disable IDE1006 // Naming Styles
@@ -141,6 +141,21 @@ namespace EZNIC
         private void btnDHCP_Click(object sender, EventArgs e)
         {
             dhcpControl2.BringToFront();
+        }
+
+        private void profilesControl2_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dhcpControl1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void profilesControl1_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

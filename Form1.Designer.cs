@@ -33,8 +33,9 @@
             this.Title = new System.Windows.Forms.Label();
             this.btnDHCP = new System.Windows.Forms.Button();
             this.btnProfiles = new System.Windows.Forms.Button();
-            this.dhcpControl2 = new EZNIC.DHCPControl();
             this.profilesControl1 = new EZNIC.ProfilesControl();
+            this.dhcpControl1 = new EZNIC.DHCPControl();
+            this.dhcpControl2 = new EZNIC.DHCPControl();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -94,26 +95,37 @@
             this.btnProfiles.UseVisualStyleBackColor = true;
             this.btnProfiles.Click += new System.EventHandler(this.btnProfiles_Click);
             // 
+            // profilesControl1
+            // 
+            this.profilesControl1.BackColor = System.Drawing.Color.White;
+            this.profilesControl1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.profilesControl1.Location = new System.Drawing.Point(9, 115);
+            this.profilesControl1.Margin = new System.Windows.Forms.Padding(0);
+            this.profilesControl1.Name = "profilesControl1";
+            this.profilesControl1.Size = new System.Drawing.Size(476, 410);
+            this.profilesControl1.TabIndex = 6;
+            // 
+            // dhcpControl1
+            // 
+            this.dhcpControl1.BackColor = System.Drawing.Color.White;
+            this.dhcpControl1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dhcpControl1.Location = new System.Drawing.Point(9, 115);
+            this.dhcpControl1.Margin = new System.Windows.Forms.Padding(0);
+            this.dhcpControl1.Name = "dhcpControl1";
+            this.dhcpControl1.Size = new System.Drawing.Size(476, 410);
+            this.dhcpControl1.TabIndex = 5;
+            this.dhcpControl1.Load += new System.EventHandler(this.dhcpControl1_Load);
+            // 
             // dhcpControl2
             // 
             this.dhcpControl2.BackColor = System.Drawing.Color.White;
             this.dhcpControl2.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dhcpControl2.Location = new System.Drawing.Point(15, 115);
+            this.dhcpControl2.Location = new System.Drawing.Point(13, 115);
             this.dhcpControl2.Margin = new System.Windows.Forms.Padding(0);
             this.dhcpControl2.Name = "dhcpControl2";
             this.dhcpControl2.Size = new System.Drawing.Size(476, 410);
             this.dhcpControl2.TabIndex = 4;
             this.dhcpControl2.Load += new System.EventHandler(this.dhcpControl2_Load);
-            // 
-            // profilesControl1
-            // 
-            this.profilesControl1.BackColor = System.Drawing.Color.White;
-            this.profilesControl1.Location = new System.Drawing.Point(24, 126);
-            this.profilesControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.profilesControl1.Name = "profilesControl1";
-            this.profilesControl1.Size = new System.Drawing.Size(476, 410);
-            this.profilesControl1.TabIndex = 5;
-            this.profilesControl1.Load += new System.EventHandler(this.profilesControl1_Load);
             // 
             // Form1
             // 
@@ -122,13 +134,14 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(500, 550);
             this.Controls.Add(this.profilesControl1);
+            this.Controls.Add(this.dhcpControl1);
             this.Controls.Add(this.dhcpControl2);
             this.Controls.Add(this.btnProfiles);
             this.Controls.Add(this.btnDHCP);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -148,6 +161,7 @@
         private System.Windows.Forms.Button btnProfiles;
        // private DHCPControl dhcpControl1;
         private DHCPControl dhcpControl2;
+        private DHCPControl dhcpControl1;
         private ProfilesControl profilesControl1;
     }
 }

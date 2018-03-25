@@ -16,5 +16,15 @@ namespace EZNIC
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ProfilesControl_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
