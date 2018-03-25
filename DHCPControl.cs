@@ -94,5 +94,47 @@ namespace EZNIC
         {
 
         }
+
+        private void radioAutoIP_CheckedChanged(object sender, EventArgs e)
+        {
+            if(radioAutoIP.Checked) {
+                ipAddressInput.Enabled = false;
+                subnetMaskInput.Enabled = false;
+                defaultGatewayInput.Enabled = false;
+            }
+            else
+            {
+                ipAddressInput.Enabled = true;
+                subnetMaskInput.Enabled = true;
+                defaultGatewayInput.Enabled = true;
+            }
+        }
+
+        private void subnetMaskInput_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void defaultGatewayInput_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioAutoDNS_CheckedChanged(object sender, EventArgs e)
+        {
+            if(radioAutoDNS.Checked)
+            {
+                dnsAddressInput.Enabled = false;
+            }
+            else
+            {
+                dnsAddressInput.Enabled = true;
+            }
+        }
+
+        private void dnsAddressInput_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

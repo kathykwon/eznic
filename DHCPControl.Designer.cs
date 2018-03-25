@@ -85,6 +85,7 @@
             this.radioAutoIP.TabStop = true;
             this.radioAutoIP.Text = "Automatically detect IP address";
             this.radioAutoIP.UseVisualStyleBackColor = true;
+            this.radioAutoIP.CheckedChanged += new System.EventHandler(this.radioAutoIP_CheckedChanged);
             // 
             // panel2
             // 
@@ -117,6 +118,7 @@
             this.radioAutoDNS.TabStop = true;
             this.radioAutoDNS.Text = "Automatic DNS";
             this.radioAutoDNS.UseVisualStyleBackColor = true;
+            this.radioAutoDNS.CheckedChanged += new System.EventHandler(this.radioAutoDNS_CheckedChanged);
             // 
             // label1
             // 
@@ -151,6 +153,7 @@
             this.subnetMaskInput.Name = "subnetMaskInput";
             this.subnetMaskInput.Size = new System.Drawing.Size(170, 26);
             this.subnetMaskInput.TabIndex = 15;
+            this.subnetMaskInput.TextChanged += new System.EventHandler(this.subnetMaskInput_TextChanged);
             // 
             // label3
             // 
@@ -167,6 +170,7 @@
             this.defaultGatewayInput.Name = "defaultGatewayInput";
             this.defaultGatewayInput.Size = new System.Drawing.Size(170, 26);
             this.defaultGatewayInput.TabIndex = 17;
+            this.defaultGatewayInput.TextChanged += new System.EventHandler(this.defaultGatewayInput_TextChanged);
             // 
             // label4
             // 
@@ -183,6 +187,7 @@
             this.dnsAddressInput.Name = "dnsAddressInput";
             this.dnsAddressInput.Size = new System.Drawing.Size(170, 26);
             this.dnsAddressInput.TabIndex = 19;
+            this.dnsAddressInput.TextChanged += new System.EventHandler(this.dnsAddressInput_TextChanged);
             // 
             // btnApplyDHCP
             // 
