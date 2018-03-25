@@ -121,7 +121,7 @@
             this.radioAutoDNS.TabStop = true;
             this.radioAutoDNS.Text = "Automatic DNS";
             this.radioAutoDNS.UseVisualStyleBackColor = true;
-            this.radioAutoDNS.CheckedChanged += new System.EventHandler(this.radioAutoDNS_CheckedChanged);
+            //this.radioAutoDNS.CheckedChanged += new System.EventHandler(this.radioAutoDNS_CheckedChanged);
             // 
             // label1
             // 
@@ -156,7 +156,7 @@
             this.subnetMaskInput.Name = "subnetMaskInput";
             this.subnetMaskInput.Size = new System.Drawing.Size(170, 30);
             this.subnetMaskInput.TabIndex = 15;
-            this.subnetMaskInput.TextChanged += new System.EventHandler(this.subnetMaskInput_TextChanged);
+            //this.subnetMaskInput.TextChanged += new System.EventHandler(this.subnetMaskInput_TextChanged);
             // 
             // label3
             // 
@@ -173,7 +173,7 @@
             this.defaultGatewayInput.Name = "defaultGatewayInput";
             this.defaultGatewayInput.Size = new System.Drawing.Size(170, 30);
             this.defaultGatewayInput.TabIndex = 17;
-            this.defaultGatewayInput.TextChanged += new System.EventHandler(this.defaultGatewayInput_TextChanged);
+            //this.defaultGatewayInput.TextChanged += new System.EventHandler(this.defaultGatewayInput_TextChanged);
             // 
             // label4
             // 

@@ -24,7 +24,7 @@ namespace EZNIC
             NetworkInterface[] ifaceList = NetworkInterface.GetAllNetworkInterfaces();
             var niclist = new List<string>();
 
-            foreach(NetworkInterface ni in ifaceList)
+            foreach (NetworkInterface ni in ifaceList)
             {
                 this.comboBox1.Items.Add(ni.Description);
             }
@@ -119,17 +119,14 @@ namespace EZNIC
 
         }
 
-<<<<<<< HEAD
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
 
         private void radioAutoIP_CheckedChanged(object sender, EventArgs e)
-=======
-        private void radioAutoIP_CheckedChanged(object sender, EventArgs e)
         {
-            if(radioAutoIP.Checked) {
+            if (radioAutoIP.Checked) {
                 ipAddressInput.Enabled = false;
                 subnetMaskInput.Enabled = false;
                 defaultGatewayInput.Enabled = false;
@@ -143,25 +140,17 @@ namespace EZNIC
         }
 
         private void subnetMaskInput_TextChanged(object sender, EventArgs e)
->>>>>>> 3c972d202ed8403152ec59d811def582970e7766
+
         {
 
         }
 
-<<<<<<< HEAD
-        private void radioAutoDNS_CheckedChanged(object sender, EventArgs e)
-=======
+
         private void defaultGatewayInput_TextChanged(object sender, EventArgs e)
->>>>>>> 3c972d202ed8403152ec59d811def582970e7766
         {
 
         }
 
-<<<<<<< HEAD
-        private void subnetMaskInput_TextChanged(object sender, EventArgs e)
-        {
-
-=======
         private void radioAutoDNS_CheckedChanged(object sender, EventArgs e)
         {
             if(radioAutoDNS.Checked)
@@ -172,7 +161,6 @@ namespace EZNIC
             {
                 dnsAddressInput.Enabled = true;
             }
->>>>>>> 3c972d202ed8403152ec59d811def582970e7766
         }
 
         private void dnsAddressInput_TextChanged(object sender, EventArgs e)
