@@ -46,6 +46,7 @@ body {
 
 .step {
   margin-top: 50px;
+  margin-left: 50px;
   display: flex;
   flex-direction: column;
 } 
@@ -58,7 +59,8 @@ h1, h2{
   line-height: 1.3em;
 }
 
-h2 {
+.step h2 {
   font-size: 40px;
   font-weight: bold;
+  margin: 0;
 }
