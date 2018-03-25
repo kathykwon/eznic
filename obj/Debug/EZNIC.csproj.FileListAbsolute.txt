@@ -8,3 +8,13 @@ C:\Users\Lim\Documents\GitHub\eznic\obj\Debug\EZNIC.csproj.GenerateResource.cach
 C:\Users\Lim\Documents\GitHub\eznic\obj\Debug\EZNIC.csproj.CoreCompileInputs.cache
 C:\Users\Lim\Documents\GitHub\eznic\obj\Debug\EZNIC.exe
 C:\Users\Lim\Documents\GitHub\eznic\obj\Debug\EZNIC.pdb
+C:\Users\tyler\eznic\bin\Debug\EZNIC.exe.config
+C:\Users\tyler\eznic\bin\Debug\EZNIC.exe
+C:\Users\tyler\eznic\bin\Debug\EZNIC.pdb
+C:\Users\tyler\eznic\obj\Debug\EZNIC.csprojResolveAssemblyReference.cache
+C:\Users\tyler\eznic\obj\Debug\EZNIC.Form1.resources
+C:\Users\tyler\eznic\obj\Debug\EZNIC.Properties.Resources.resources
+C:\Users\tyler\eznic\obj\Debug\EZNIC.csproj.GenerateResource.cache
+C:\Users\tyler\eznic\obj\Debug\EZNIC.csproj.CoreCompileInputs.cache
+C:\Users\tyler\eznic\obj\Debug\EZNIC.exe
+C:\Users\tyler\eznic\obj\Debug\EZNIC.pdb
